@@ -5,6 +5,11 @@ public class Movie
 {
 	private String title;
 	private int year;
+	private float rate;
+
+	public float getRate() { return rate; }
+
+	public void setRate(float rate) { this.rate = rate; }
 
 	public String getTitle()
 	{
