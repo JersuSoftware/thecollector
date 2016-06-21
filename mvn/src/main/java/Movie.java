@@ -3,7 +3,7 @@
  */
 public class Movie
 {
-	private String title;
+	private String Title;
 	private int year;
 	private float rate;
 
@@ -13,12 +13,12 @@ public class Movie
 
 	public String getTitle()
 	{
-		return title;
+		return Title;
 	}
 
 	public void setTitle(String title)
 	{
-		this.title = title;
+		this.Title = title;
 	}
 
 	public int getYear()

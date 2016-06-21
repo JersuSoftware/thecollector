@@ -7,6 +7,18 @@ public class Serie {
     private int year;
     private float rate;
 
+    public int getTeste()
+    {
+        return teste;
+    }
+
+    public void setTeste(int teste)
+    {
+        this.teste = teste;
+    }
+
+    private int teste;
+
     public float getRate() { return rate; }
 
     public void setRate(float rate) { this.rate = rate; }
