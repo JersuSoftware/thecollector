@@ -14,7 +14,7 @@ public class MediaRequest
 	private static final String USER_AGENT = "Mozilla/5.0";
 
 	//private static final String GET_URL = "http://www.omdbapi.com/?t=game+&y=&plot=full&r=json";
-	private static final String GET_URL = "http://www.omdbapi.com/?t=";
+	private static final String GET_URL = "http://www.omdbapi.com/?s=";
 
 	private static final String POST_URL = "http://localhost:9090/SpringMVCExample/home";
 
@@ -96,6 +96,6 @@ public class MediaRequest
 
 	public void setTitle(String title)
 	{
-		this.title = title;
+		this.title = title.replace(" ", "+");
 	}
 }
