@@ -21,12 +21,14 @@ public class Main
 		}catch (IOException e){
 			System.out.println(e);
 		}
-		if (json.contains("False")) System.out.println("Erro");
+		if (json.contains("Error")) System.out.println("Nenhum resultado encontrado");
 		else
 		{
-			System.out.println(json);
 			SearchList searchList = gson.fromJson(json, SearchList.class);
-			System.out.println(searchList.Search.get(0).getTitle());
+			for (Movie movie : searchList.getSearch())
+			{
+				System.out.println(movie.getTitle());
+			}
 		}
 	}
 }
