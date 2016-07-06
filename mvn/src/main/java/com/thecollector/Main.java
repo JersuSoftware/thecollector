@@ -1,6 +1,11 @@
 package com.thecollector;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,10 +20,16 @@ public class Main
 		MediaRequest request = new MediaRequest();
 		Scanner scan = new Scanner(System.in);
 		SearchList search = new SearchList();
-		Favorites favorites = new Favorites();
 		System.out.println("Welcome");
 		FileManager fileManager = new FileManager();
-		fileManager.setFileName("favorites.txt");
+		fileManager.setFileName("favoritesList.txt");
+		Favorites favorites = new Favorites();
+		String fileList = fileManager.readFile();
+		if(!fileList.equals("empty")) {
+			TypeToken<List<Movie>> type = new TypeToken<List<Movie>>() {};
+			List<Movie> favList = gson.fromJson(fileList, type.getType());
+			favorites.setFavoritesMovies(favList);
+		}
 		while(true) {
 			System.out.println("Chose one option of the menu:");
 			System.out.println("1 - Search Movie");

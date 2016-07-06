@@ -23,7 +23,7 @@ public class FileManager {
 		try {
 			FileWriter fileWriter = new FileWriter(fileName, true);
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-			bufferedWriter.write("Teste");
+			bufferedWriter.write("empty");
 			bufferedWriter.close();
 			fileWriter.close();
 		} catch (Exception e){
@@ -38,6 +38,7 @@ public class FileManager {
 			Scanner scanner = new Scanner(fileReader);
 			while(scanner.hasNext())
 				file = scanner.nextLine();
+			System.out.println(file);
 		} catch (FileNotFoundException e){
 			this.createFile();
 		} catch (Exception e){
@@ -48,9 +49,11 @@ public class FileManager {
 
 	public void writeToFile(String json){
 		try {
-			FileWriter fileWriter = new FileWriter(fileName, true);
+			FileWriter fileWriter = new FileWriter(fileName);
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 			bufferedWriter.write(json);
+			bufferedWriter.close();
+			fileWriter.close();
 		} catch (Exception e){
 			e.printStackTrace();
 		}

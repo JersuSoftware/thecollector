@@ -5,6 +5,7 @@ package com.thecollector;
  */
 public class Movie
 {
+
 	private String Title;
 	private String Year;
 	private String Released;
