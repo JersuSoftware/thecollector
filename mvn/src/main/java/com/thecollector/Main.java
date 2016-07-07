@@ -2,9 +2,12 @@ package com.thecollector;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.thecollector.collections.Favorites;
+import com.thecollector.collections.Movie;
+import com.thecollector.utils.FileManager;
+import com.thecollector.utils.MediaRequest;
+import com.thecollector.utils.SearchList;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -50,7 +53,6 @@ public class Main
 					break;
 				case 3:
 					String list = gson.toJson(favorites.getFavoritesMovies());
-					System.out.println(list);
 					fileManager.writeToFile(list);
 					System.out.println("Good Bye");
 					return;

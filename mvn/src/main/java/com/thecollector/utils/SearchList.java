@@ -1,6 +1,8 @@
-package com.thecollector;
+package com.thecollector.utils;
 
 import com.google.gson.Gson;
+import com.thecollector.collections.Favorites;
+import com.thecollector.collections.Movie;
 
 import java.io.IOException;
 import java.util.ArrayList;

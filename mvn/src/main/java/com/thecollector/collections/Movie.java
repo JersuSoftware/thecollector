@@ -1,4 +1,4 @@
-package com.thecollector;
+package com.thecollector.collections;
 
 /**
  * Created by erick on 16/06/16.

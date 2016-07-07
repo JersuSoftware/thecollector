@@ -1,4 +1,4 @@
-package com.thecollector;
+package com.thecollector.utils;
 
 
 import java.io.*;
@@ -38,7 +38,6 @@ public class FileManager {
 			Scanner scanner = new Scanner(fileReader);
 			while(scanner.hasNext())
 				file = scanner.nextLine();
-			System.out.println(file);
 		} catch (FileNotFoundException e){
 			this.createFile();
 		} catch (Exception e){

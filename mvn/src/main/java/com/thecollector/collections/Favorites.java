@@ -1,4 +1,6 @@
-package com.thecollector;
+package com.thecollector.collections;
+
+import com.thecollector.collections.Movie;
 
 import java.util.ArrayList;
 import java.util.List;
